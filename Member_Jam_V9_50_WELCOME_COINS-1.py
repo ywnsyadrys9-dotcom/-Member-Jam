@@ -7,7 +7,8 @@ import sqlite3, threading, time
 import telebot
 from telebot import types
 
-TOKEN = input("توکن ربات را وارد کنید: ").strip()
+import os
+TOKEN = os.getenv("BOT_TOKEN")
 
 if ":" not in TOKEN:
     raise ValueError("توکن واردشده معتبر نیست؛ توکن باید شامل : باشد.")
